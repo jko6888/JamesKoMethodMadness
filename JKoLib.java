@@ -22,10 +22,3 @@ public class JKoLib {
         return (a + "-" + b + "-" + c);
     }
 
-
-    public static int sumUpTo (int x)
-    {
-        int y = (x*(x+1)/2);
-        return (y);
-    } 
-}
