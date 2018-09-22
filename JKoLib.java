@@ -42,11 +42,11 @@ public class JKoLib {
 
     public static boolean isFibonacci(int x) {
         int num1 = 1;
-        int check2 = 0;
-        for (int check3 = 0; num1 < x; num1 = check3) {
-            check3 = num1 + check2;
-            check2 = num1;
-            if (check3 == x)
+        int num2 = 0;
+        for (int num3 = 0; num1 < x; num1 = num3) {
+            num3 = num1 + num2;
+            num2 = num1;
+            if (num3 == x)
                 return true;
 
         }
