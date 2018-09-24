@@ -16,9 +16,13 @@ public class JKoLib {
 
     public static String dateStr(String date) {
         String x = date.substring(3, 5);
+        // creates a string for the birth day
         String y = date.substring(0, 2);
-        String z = date.substring(6, 10);    //removes the day, month, and year and adds them to a new string
+        // creates a string for the birth month
+        String z = date.substring(6, 10);
+        // creates a string for the birth year
         return (x + "-" + y + "-" + z);
+        //returns the new format with the dashes included
     }
 
 
@@ -43,7 +47,7 @@ public class JKoLib {
         int x = 0;
         int y = 1;
         for (int z = 0; y < number; y = z) {
-            z = y + x;
+            z = y + x; //adds the preceding number with the current number
             x = y;
             if (z == number) //tests to see if the number belongs there
                 return true;
