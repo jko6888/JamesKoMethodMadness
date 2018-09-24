@@ -2,18 +2,17 @@ package JamesKo;
 
 public class JKoLib {
     public static boolean isPalindrome(String str) {
-        String word = ""; //sets up a empty string
+        String word = "";
         int i = str.length() - 1;
         while (i >= 0) {
             word = word + str.substring(i, i + 1);
             i--;
         }
-        if (word.equals(str)) { //test to see if
+        if (word.equals(str)) { //test to see if it is the same word
             return true;
-        } else {
+        }
             return false;
         }
-    }
 
     public static String dateStr(String date) {
         String x = date.substring(3, 5);
@@ -24,7 +23,7 @@ public class JKoLib {
 
 
     public static int sumUpTo(int x) {
-        int b = 0;
+        int b = x; //b goes up to the number that x goes up to and adds them together
         for (int a = 0; a < x; a++) {
             b = b + a; //adds the previous numbers with the sum up to
         }
@@ -33,20 +32,20 @@ public class JKoLib {
 
     public static String multiplicationTable(int start, int length) {
         String multiply = "";
-        for (int i = 0; i <= length; i++) {
-            int num = start * i;
-            multiply = multiply + start + "*" + i + "=" + num + "__"; //multiples the base with the numbers up to the range
+        for (int x = 0; x <= length; x++) {
+            int num = start * x;
+            multiply = multiply + start + "*" + x + "=" + num + "  "; //multiples the base with the numbers up to the length
         }
         return multiply;
     }
 
-    public static boolean isFibonacci(int x) {
-        int num1 = 1;
-        int num2 = 0;
-        for (int num3 = 0; num1 < x; num1 = num3) {
-            num3 = num1 + num2;
-            num2 = num1;
-            if (num3 == x)
+    public static boolean isFibonacci(int number) {
+        int x = 0;
+        int y = 1;
+        for (int z = 0; y < number; y = z) {
+            z = y + x;
+            x = y;
+            if (z == number) //tests to see if the number belongs there
                 return true;
 
         }
